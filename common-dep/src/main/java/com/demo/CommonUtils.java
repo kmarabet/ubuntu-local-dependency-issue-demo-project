@@ -2,7 +2,6 @@ package com.demo;
 
 import org.apache.commons.lang.RandomStringUtils;
 import java.util.UUID;
-import org.springframework.core.env.Environment;
 
 public class CommonUtils {
 
@@ -15,13 +14,6 @@ public class CommonUtils {
 
     public static String generateUniqueQueueName(){
         return UUID.randomUUID().toString();
-    }
-
-    private String getProperty(final String name, final boolean required, Environment environment) {
-        if (required)
-            return System.getenv(name) != null ? System.getenv(name) : environment.getRequiredProperty(name);
-        else
-            return System.getenv(name) != null ? System.getenv(name) : environment.getProperty(name);
     }
 
 }
