@@ -19,6 +19,8 @@ we will get an error:
 
 Resolved.
 
- Cause: this issue was occurring when no install command was executed against the root (parent) project,
- so the ubuntu-local-dependency-issue-demo-project was not installed in local repository this was causing the issue
- (Could not find artifact com.demo:ubuntu-local-dependency-issue-demo-project:pom:1.0-SNAPSHOT)
+### CAUSE ###
+
+This issue was occurring when no install command was executed against the root (parent) project,
+so the ubuntu-local-dependency-issue-demo-project was not installed in local repository this was causing the issue
+(Could not find artifact com.demo:ubuntu-local-dependency-issue-demo-project:pom:1.0-SNAPSHOT)
