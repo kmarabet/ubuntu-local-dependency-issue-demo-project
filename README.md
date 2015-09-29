@@ -1,27 +1,16 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
 
-ubuntu-local-dependency-issue-demo-project
+To reproduce an issue with local jar dependency could not be resolved when building a child module on Ubuntu machine.
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Build the project in order to install the common-dep dependency in local maven repository using:
+clean install
+Then if we try to execute a build against the child-module like: package or test ...
 
-### Contribution guidelines ###
+we will get an error:
 
-* Writing tests
-* Code review
-* Other guidelines
+[ERROR] Failed to execute goal on project cassandra-test: Could not resolve dependencies for project com.demo:child-module:jar:1.0-SNAPSHOT: Failed to collect dependencies for [... Failed to read artifact descriptor for com.demo:common-dep:jar:1.0-SNAPSHOT: Could not find artifact com.demo:ubuntu-local-dependency-issue-demo-project:pom:1.0-SNAPSHOT -> [Help 1]
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
